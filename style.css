@@ -1,0 +1,196 @@
+/* ------------------------------
+   Premium Restaurant Theme
+   Color Palette:
+   - Maroon: #8B1E3F
+   - Gold:   #F2D16B
+   - Cream:  #FFF8EC
+   - Dark Brown: #3D2C2E
+   - Black: #1B1A17
+--------------------------------*/
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Nunito:wght@400;600&display=swap');
+
+/* Global */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: #FFF8EC; /* Cream */
+    color: #1B1A17;
+}
+
+/* -------------------- NAVBAR -------------------- */
+.main-nav {
+    position: sticky;
+    top: 0;
+    background-color: #8B1E3F; /* Maroon */
+    padding: 1rem 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+}
+
+.main-nav a {
+    color: #F2D16B; /* Gold */
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(255,255,255,0.8);
+}
+
+/* -------------------- HEADER -------------------- */
+.main-header {
+    padding: 6rem 1rem;
+    text-align: center;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                      url('restaurant-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.main-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin: 0;
+    color: #F2D16B;
+}
+
+.main-header .tagline {
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* -------------------- SECTIONS -------------------- */
+section {
+    padding: 3rem 8%;
+    animation: fadeIn 0.9s ease-out;
+}
+
+/* Announcement Boxes */
+.announcements div {
+    background: #8B1E3F;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.announcements div:hover {
+    transform: translateY(-5px);
+}
+
+/* Timings */
+.timings {
+    background: #F2D16B;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.timings h2 {
+    font-family: 'Playfair Display', serif;
+    color: #8B1E3F;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* -------------------- MENU GRID -------------------- */
+.menu h2 {
+    font-family: 'Playfair Display', serif;
+    color: #8B1E3F;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.4rem;
+}
+
+.menu-category h3 {
+    color: #3D2C2E;
+    font-family: 'Playfair Display', serif;
+    border-left: 6px solid #8B1E3F;
+    padding-left: 10px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Menu Item Box */
+.menu-item {
+    background: white;
+    border-radius: 10px;
+    padding: 1.25rem;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    border-left: 5px solid #8B1E3F;
+}
+
+.menu-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* Menu Item Text */
+.item-name {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.price {
+    font-family: 'Playfair Display', serif;
+    color: #8B1E3F;
+    font-size: 1.2rem;
+}
+
+/* -------------------- FOOTER -------------------- */
+footer {
+    background: #8B1E3F;
+    color: #F2D16B;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    margin-top: 2rem;
+}
+
+footer .contact {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+footer .address {
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+

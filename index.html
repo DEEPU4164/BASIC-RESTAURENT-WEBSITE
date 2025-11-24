@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anupama Multi Cuisine Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <style>
+        /* --- Google Fonts Import --- */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+        /* --- Global Styles (Based on your "NEW THEME") --- */
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #3f523c; /* Dark green from the provided image */
+            color: #f7f7f7; /* Light text for dark background */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, dt {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        main {
+            padding: 0 8%;
+        }
+
+        /* --- NEW: Navigation Bar --- */
+        .main-nav {
+            position: sticky;
+            top: 0;
+            background-color: #2e3b2c; /* Slightly darker green for nav */
+            padding: 1rem 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .main-nav ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .main-nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .main-nav a:hover {
+            background-color: #6a8c67; /* A lighter green for hover */
+        }
+
+
+        /* --- UPDATED: Header --- */
+        .main-header {
+            text-align: center;
+            padding: 6rem 1rem; /* Increased padding */
+            background-color: #3f523c; /* Main dark green from the image */
+            
+            /* --- NEW THEME FROM IMAGE --- */
+            /* This assumes the image is in the same folder as the HTML file */
+            background-image: linear-gradient(rgba(63, 82, 60, 0.7), rgba(63, 82, 60, 0.7)), url('tp202-techi-blogbanner-food-11-googlefocus-a009-kaboompics-299-304-378-p-303-pf-s23-pf-s53-pf-s64-pf-s76.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative; 
+            color: #FFFFFF; /* Ensure header text is white */
+        }
+
+        .main-header h1 {
+            color: #d8f3da; /* A very light green for the main title */
+            margin: 0;
+            font-size: 2.8rem; /* Made slightly larger */
+        }
+
+        .main-header .tagline {
+            font-size: 1.2rem;
+            color: #a4c4a2; /* A softer green for the tagline */
+            margin: 0.5rem 0 0 0;
+            font-weight: 600;
+        }
+
+        /* --- Announcements Section (Updated colors) --- */
+        .announcements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .promo-banner,
+        .hero-quote,
+        .delivery-info {
+            background-color: #577353; /* A medium green for content blocks */
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            color: #f7f7f7; /* Light text for these blocks */
+        }
+
+        .promo-banner h2 {
+            color: #d8f3da; /* Light green accent */
+            margin: 0;
+        }
+
+        .hero-quote blockquote {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            color: #f7f7f7;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .delivery-info h2 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.5rem;
+            color: #d8f3da; /* Light green accent */
+        }
+        .delivery-info p {
+            margin: 0;
+            font-weight: 600;
+            color: #f7f7f7;
+        }
+
+        /* --- Timings Section (Updated colors) --- */
+        .timings {
+            background-color: #577353; /* Medium green for content blocks */
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            margin: 1rem 0 2.5rem 0;
+            color: #f7f7f7; /* Light text */
+        }
+
+        .timings h2 {
+            text-align: center;
+            color: #d8f3da; /* Light green accent */
+            font-size: 2rem;
+            margin: 0 0 1.5rem 0;
+        }
+
+        .timing-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .timing-list dt {
+            font-size: 1.1rem;
+            color: #a4c4a2; /* Softer green */
+            margin-bottom: 0.25rem;
+        }
+
+        .timing-list dd {
+            margin: 0 0 0.5rem 0;
+            font-weight: 600;
+            color: #f7f7f7;
+        }
+
+        /* --- Menu Section (Updated colors) --- */
+        .menu {
+            padding-bottom: 2.5rem;
+        }
+
+        .menu > h2 { /* The "Full Menu" title */
+            text-align: center;
+            color: #d8f3da; /* Light green accent */
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .menu-category {
+            margin-bottom: 2.5rem;
+        }
+
+        .menu-category h3 {
+            font-size: 1.5rem;
+            color: #a4c4a2; /* Softer green for category titles */
+            border-bottom: 2px solid #d8f3da; /* Light green accent for border */
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .menu-item {
+            background-color: #edf0ec; /* Medium green for menu items */
+            border-radius: 8px;
+            padding: 1.25rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #f2f6f1; /* Slightly lighter green border */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #e21010; /* Light text */
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(13, 8, 8, 0.3);
+        }
+
+        .menu-item .item-name {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #090808;
+        }
+
+        .menu-item .price {
+            color: #090808; /* Light green accent for price */
+            font-weight: 700;
+            font-size: 1.1rem;
+            font-family: 'Montserrat', sans-serif;
+            white-space: nowrap; /* Prevents price from wrapping */
+            margin-left: 1rem;
+        }
+
+        /* --- Footer (Updated colors) --- */
+        footer {
+            background-color: #2e3b2c; /* Darker green for footer */
+            color: #f0f0f0; /* Lighter text for footer */
+            text-align: center;
+            padding: 2.5rem 1rem;
+            font-size: 1rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+        
+        footer .contact {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin: 1rem 0;
+            color: #d8f3da; /* Light green accent for contact info */
+        }
+
+        footer .non-veg,
+        footer .pure-veg {
+            color: #a4c4a2; /* Softer green for secondary footer text */
+            font-size: 0.9rem;
+        }
+        
+        footer .address {
+            font-size: 0.9rem;
+            color: #d8f3da; /* Light green accent for address */
+            margin-top: 1rem;
+        }
+
+    </style> -->
+</head>
+<body>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#timings">TIMING</a></li>
+            <li><a href="#menu">FULL MENU</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <header class="main-header">
+        <h1>ANUPAMA INN MULTI CUISINE RESTAURANT</h1>
+        <p class="tagline">TIFFINS | MEALS | BIRYANI | CHINESE</p>
+    </header>
+
+    <main>
+        <section class="announcements">
+            <div class="promo-banner">
+                <h2>AU STUDENTS OFFERS</h2>
+            </div>
+            
+            <div class="delivery-info">
+                <h2>FREE DELIVERY 🛵</h2>
+                <p>TIMING 20-40 MIN</p>
+            </div>
+        </section>
+
+        <section class="timings" id="timings">
+            <h2>TIMING</h2>
+            <dl class="timing-list">
+                <div>
+                    <dt>TIFFINS :</dt>
+                    <dd>6:00 AM to 11:45 AM</dd>
+                    <dd>6:00 PM to 10:00 PM</dd>
+                </div>
+                <div>
+                    <dt>VEG MEALS :</dt>
+                    <dd>12:00 PM to 04:00 PM</dd>
+                </div>
+                <div>
+                    <dt>VEG BIRYANI & VEG CURRIES :</dt>
+                    <dd>12:00 PM to 04:00 PM</dd>
+                    <dd>06:00 PM to 09:00 PM</dd>
+                </div>
+                <div>
+                    <dt>VEG & NON-VEG :</dt>
+                    <dd>(VEG & NON VEG BIRYANIS, VEG & NON VEG FRIED RICE,  VEG & NON VEG STARTERS AND CURRIES)</dd>
+                    <dd>12:00 PM to 03:30 PM</dd>
+                    <dd>06:30 PM to 10:00 PM</dd>
+                </div>
+            </dl>
+        </section>
+
+        <section class="menu" id="menu">
+            <h2>FULL MENU</h2>
+
+            <section class="menu-category">
+                <h3>NON-VEG BIRYANI</h3>
+                <div class="menu-grid">
+                    <div class="menu-item"><p class="item-name">CHICKEN DUM/FRY BIRYANI</p><span class="price">₹130/-</span></div>
+                    <div class="menu-item"><p class="item-name">CHICKEN LOLLIPOP BIRYANI</p><span class="price">₹140/-</span></div>
+                    <div class="menu-item"><p class="item-name">CHICKEN WINGS BIRYANI</p><span class="price">₹140/-</span></div>
+                    <div class="menu-item"><p class="item-name">CHILLY CHICKEN BIRYANI</p><span class="price">₹150/-</span></div>
+                    <div class="menu-item"><p class="item-name">CHICKEN 65 BIRYANI</p><span class="price">₹150/-</span></div>
+                    <div class="menu-item"><p class="item-name">CHICKEN MUGHLAI BIRYANI</p><span class="price">₹150/-</span></div>
+                    <div class="menu-item"><p class="item-name">MIXED BIRYANI (CHICKEN,PRAWN)</p><span class="price">₹180/-</span></div>
+                    <div class="menu-item"><p class="item-name">FISH BONELESS BIRYANI</p><span class="price">₹150/-</span></div>
+                    <div class="menu-item"><p class="item-name">PRAWN BIRYANI</p><span class="price">₹190/-</span></div>
+                    
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h3>VEG BIRYANS</h3>
+                <div class="menu-grid">
+                    <div class="menu-item"><p class="item-name">VEG BIRYANI</p><span class="price">₹100/-</span></div>
+                    <div class="menu-item"><p class="item-name">KAJU BIRYANI</p><span class="price">₹140/-</span></div>
+                    <div class="menu-item"><p class="item-name">MUSHROOM BIRYANI</p><span class="price">₹140/-</span></div>
+                    <div class="menu-item"><p class="item-name">PANEER BIRYANI</p><span class="price">₹150/-</span></div>
+                    <div class="menu-item"><p class="item-name">KAJU PANNER BIRYANI</p><span class="price">₹160/-</span></div>
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h3>NON-VEG FRIED RICE</h3>
+                <div class="menu-grid">
+                    <div class="menu-item"><p class="item-name">EGG FRIED RICE</p><span class="price">₹90/-</span></div>
+                    <div class="menu-item"><p class="item-name">CHICKEN FRIED RICE</p><span class="price">₹120/-</span></div>
+                    <div class="menu-item"><p class="item-name">CHICKEN SCHEZWAN FRIED RICE</p><span class="price">₹130/-</span></div>
+                    <div class="menu-item"><p class="item-name">MIXED(CHICKEN AND PRAWN) FRIED RICE</p><span class="price">₹180/-</span></div>
+                    <div class="menu-item"><p class="item-name">PRAWN FRIED RICE</p><span class="price">₹190/-</span></div>
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h3>VEG FRIED RICE</h3>
+                <div class="menu-grid">
+                    <div class="menu-item"><p class="item-name">VEG FRIED RICE</p><span class="price">₹100/-</span></div>
+                    <div class="menu-item"><p class="item-name">VEG SCHEZWAN FRIED RICE</p><span class="price">₹120/-</span></div>
+                    <div class="menu-item"><p class="item-name">KAJU FRIED RICE</p><span class="price">₹140/-</span></div>
+                    <div class="menu-item"><p class="item-name">MUSHROOM FRIED RICE</p><span class="price">₹140/-</span></div>
+                    <div class="menu-item"><p class="item-name">BABY CORN FRIED RICE</p><span class="price">₹140/-</span></div>
+                    <div class="menu-item"><p class="item-name">VEG MIXED FRIED RICE</p><span class="price">₹140/-</span></div>
+                    <div class="menu-item"><p class="item-name">VEG MANCHURIAN FRIED RICE</p><span class="price">₹140/-</span></div>
+                    <div class="menu-item"><p class="item-name">PANEER FRIED RICE</p><span class="price">₹150/-</span></div>
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h3>NON-VEG STARTERS</h3>
+                <div class="menu-grid">
+                    <div class="menu-item"><p class="item-name">CHICKEN LOLLIPOP (3)</p><span class="price">₹100/-</span></div>
+                    <div class="menu-item"><p class="item-name">CHICKEN WINGS (5)</p><span class="price">₹120/-</span></div>
+                    <div class="menu-item"><p class="item-name">CHICKEN MANCHURIAN</p><span class="price">₹120/-</span></div>
+                    <div class="menu-item"><p class="item-name">CHILLY CHICKEN</p><span class="price">₹120/-</span></div>
+                    <div class="menu-item"><p class="item-name">CHICKEN 65</p><span class="price">₹120/-</span></div>
+                    <div class="menu-item"><p class="item-name">APPOLLO FISH</p><span class="price">₹140/-</span></div>
+                    <div class="menu-item"><p class="item-name">CHILLY FISH BONELESS</p><span class="price">₹140/-</span></div>
+                    <div class="menu-item"><p class="item-name">FISH MAJESTIC</p><span class="price">₹140/-</span></div>
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h3>VEG STARTERS</h3>
+                <div class="menu-grid">
+                    <div class="menu-item"><p class="item-name">CHILLY BABY CORN</p><span class="price">₹90/-</span></div>
+                    <div class="menu-item"><p class="item-name">BABY CORN 65</p><span class="price">₹90/-</span></div>
+                    <div class="menu-item"><p class="item-name">CRISPY CORN</p><span class="price">₹90/-</span></div>
+                    <div class="menu-item"><p class="item-name">PANEER MAJESTIC</p><span class="price">₹100/-</span></div>
+                    <div class="menu-item"><p class="item-name">CHILLY PANEER</p><span class="price">₹100/-</span></div>
+                    <div class="menu-item"><p class="item-name">PANEER 65</p><span class="price">₹100/-</span></div>
+                    <div class="menu-item"><p class="item-name">MUSHROOM 65</p><span class="price">₹100/-</span></div>
+                    <div class="menu-item"><p class="item-name">CHILLY MUSHROOM</p><span class="price">₹100/-</span></div>
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h3>CURRIES</h3>
+                <div class="menu-grid">
+                    <div class="menu-item"><p class="item-name">CHICKEN CURRY</p><span class="price">₹120/-</span></div>
+                    <div class="menu-item"><p class="item-name">PRAWN CURRY</p><span class="price">₹150/-</span></div>
+                    <div class="menu-item"><p class="item-name">MIXED KADI VEG</p><span class="price">₹100/-</span></div>
+                    <div class="menu-item"><p class="item-name">MUSHROOM CURRY</p><span class="price">₹120/-</span></div>
+                    <div class="menu-item"><p class="item-name">METHI CHAMAN CURRY</p><span class="price">₹120/-</span></div>
+                    <div class="menu-item"><p class="item-name">KAJU TAMATO CURRY</p><span class="price">₹130/-</span></div>
+                    <div class="menu-item"><p class="item-name">KAJU PANEER CURRY</p><span class="price">₹130/-</span></div>
+                    <div class="menu-item"><p class="item-name">PANEER BUTTER MASALA</p><span class="price">₹140/-</span></div>
+                    <div class="menu-item"><p class="item-name">MUTTER PANEER</p><span class="price">₹140/-</span></div>
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h3>PULKAS</h3>
+                <div class="menu-grid">
+                    <div class="menu-item"><p class="item-name">EACH PULKAS</p><span class="price">₹10/-</span></div>
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h3>MEALS</h3>
+                <div class="menu-grid">
+                    <div class="menu-item"><p class="item-name">VEG MEALS</p><span class="price">₹140/-</span></div>
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h3>TIFFINS</h3>
+                <div class="menu-grid">
+                    <div class="menu-item"><p class="item-name">IDLY (3)</p><span class="price">₹40/-</span></div>
+                    <div class="menu-item"><p class="item-name">SAMBAR IDLY (2)</p><span class="price">₹40/-</span></div>
+                    <div class="menu-item"><p class="item-name">GHEE KARAM IDLY (2)</p><span class="price">₹40/-</span></div>
+                    <div class="menu-item"><p class="item-name">MYSORE BONDA (4)</p><span class="price">₹40/-</span></div>
+                    <div class="menu-item"><p class="item-name">UPMA</p><span class="price">₹40/-</span></div>
+                    <div class="menu-item"><p class="item-name">VADA (3)</p><span class="price">₹50/-</span></div>
+                    <div class="menu-item"><p class="item-name">SAMBAR VADA (2)</p><span class="price">₹50/-</span></div>
+                    <div class="menu-item"><p class="item-name">IDLY (2) + VADA COMBO (2)</p><span class="price">₹50/-</span></div>
+                    <div class="menu-item"><p class="item-name">CURD VADA (2)</p><span class="price">₹60/-</span></div>
+                    <div class="menu-item"><p class="item-name">PLANE DOSA</p><span class="price">₹50/-</span></div>
+                    <div class="menu-item"><p class="item-name">MASALA DOSA</p><span class="price">₹60/-</span></div>
+                    <div class="menu-item"><p class="item-name">UPMA DOSA</p><span class="price">₹60/-</span></div>
+                    <div class="menu-item"><p class="item-name">ONION DOSA</p><span class="price">₹60/-</span></div>
+                    <div class="menu-item"><p class="item-name">GHEE MASALA DOSA</p><span class="price">₹70/-</span></div>
+                    <div class="menu-item"><p class="item-name">GHEE ONION DOSA</p><span class="price">₹70/-</span></div>
+                    <div class="menu-item"><p class="item-name">PLAIN RAVA DOSA</p><span class="price">₹55/-</span></div>
+                    <div class="menu-item"><p class="item-name">ONION RAVA DOSA</p><span class="price">₹65/-</span></div>
+                    <div class="menu-item"><p class="item-name">RAVVA MASALA DOSA</p><span class="price">₹70/-</span></div>
+                    <div class="menu-item"><p class="item-name">RAVVA ONION DOSA</p><span class="price">₹75/-</span></div>
+                    <div class="menu-item"><p class="item-name">70 MM M.LA DOSA</p><span class="price">₹75/-</span></div>
+                    <div class="menu-item"><p class="item-name">70 MM MASALA DOSA</p><span class="price">₹80/-</span></div>
+                    <div class="menu-item"><p class="item-name">GHEE KARAM DOSA</p><span class="price">₹70/-</span></div>
+                    <div class="menu-item"><p class="item-name">GHEE PLANE DOSA</p><span class="price">₹60/-</span></div>
+                    <div class="menu-item"><p class="item-name">PLANE PESARA</p><span class="price">₹50/-</span></div>
+                    <div class="menu-item"><p class="item-name">ONION PESARA</p><span class="price">₹60/-</span></div>
+                    <div class="menu-item"><p class="item-name">UPMA PESARA</p><span class="price">₹60/-</span></div>
+                    <div class="menu-item"><p class="item-name">PLANE UTHAPPAM</p><span class="price">₹60/-</span></div>
+                    <div class="menu-item"><p class="item-name">ONION UTHAPPAM</p><span class="price">₹70/-</span></div>
+                    <div class="menu-item"><p class="item-name">CHAPATI</p><span class="price">₹60/-</span></div>
+                    <div class="menu-item"><p class="item-name">PAROTA</p><span class="price">₹60/-</span></div>
+                    <div class="menu-item"><p class="item-name">POORI</p><span class="price">₹60/-</span></div>
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h3>ANUPAMA SPECIALS</h3>
+                <div class="menu-grid">
+                    <div class="menu-item"><p class="item-name">SPONGE DOSA (2)</p><span class="price">₹60/-</span></div>
+                    <div class="menu-item"><p class="item-name">CHITTI PESARATTU (2)</p><span class="price">₹60/-</span></div>
+                    <div class="menu-item"><p class="item-name">DIBBA ROTTI</p><span class="price">₹50/-</span></div>
+                    <div class="menu-item"><p class="item-name">POORI (1) + IDLY (2) COMBO</p><span class="price">₹50/-</span></div>
+                    <div class="menu-item"><p class="item-name">PANNER DOSA</p><span class="price">₹100/-</span></div>
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h3>Juices</h3>
+                <div class="menu-grid">
+                    <div class="menu-item"><p class="item-name">WITHOUT ICE ANY JUICE</p><span class="price">₹60/-</span></div>
+                    <div class="menu-item"><p class="item-name">GRAPE JUICE</p><span class="price">₹50/-</span></div>
+                    <div class="menu-item"><p class="item-name">PINE APPLE JUICE</p><span class="price">₹50/-</span></div>
+                    <div class="menu-item"><p class="item-name">PAPAYA JUICE</p><span class="price">₹50/-</span></div>
+                    <div class="menu-item"><p class="item-name">MOSAMBI JUICE</p><span class="price">₹50/-</span></div>
+                    <div class="menu-item"><p class="item-name">WATERMELON JUICE</p><span class="price">₹50/-</span></div>
+                    <div class="menu-item"><p class="item-name">MUSKMELON JUICE</p><span class="price">₹50/-</span></div>
+                    <div class="menu-item"><p class="item-name">CARROT JUICE</p><span class="price">₹50/-</span></div>
+                    <div class="menu-item"><p class="item-name">BEETROOT JUICE</p><span class="price">₹50/-</span></div>
+                    <div class="menu-item"><p class="item-name">BANANA JUICE</p><span class="price">₹50/-</span></div>
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h3>Signature Shakes</h3>
+                <div class="menu-grid">
+                    <div class="menu-item"><p class="item-name">CHOCOLATE SHAKE</p><span class="price">₹80/-</span></div>
+                    <div class="menu-item"><p class="item-name">STRAWBERRY SHAKE</p><span class="price">₹80/-</span></div>
+                    <div class="menu-item"><p class="item-name">BUTTERSCOTCH SHAKE</p><span class="price">₹80/-</span></div>
+                    <div class="menu-item"><p class="item-name">VANILLA SHAKE</p><span class="price">₹80/-</span></div>
+                    <div class="menu-item"><p class="item-name">BADAM SHAKE</p><span class="price">₹80/-</span></div>
+                    <div class="menu-item"><p class="item-name">BLACK CURRENT </p><span class="price">₹80/-</span></div>
+                    <div class="menu-item"><p class="item-name">MANGO </p><span class="price">₹80/-</span></div>
+                    <div class="menu-item"><p class="item-name">DRY FRUITS </p><span class="price">₹80/-</span></div>
+                    <div class="menu-item"><p class="item-name">MIXED FRUIT </p><span class="price">₹80/-</span></div>
+                    <div class="menu-item"><p class="item-name">POMEGRANATE </p><span class="price">₹90/-</span></div>
+                </div>
+            </section>
+
+        </section>
+    </main>
+
+    <footer id="contact">
+        <p>ALL TYPES TIFFENS, MEALS, BIRYANI, CHINESE AVAILABLE</p>
+        <p class="contact">📞 For Orders & Enquiries: +91 9550454565 / +91 9573573123</p>
+        <div class="kitchen-info">
+            <p class="non-veg">Non Veg Kitchen (Restaurant 1st Floor)</p>
+            <p class="pure-veg">Pure Veg Kitchen (Ground Floor)</p>
+        </div>
+        <p class="address">📍 Location: Opp.Three Town Police Station, Waltair Main Road, Chinna Waltair, Visakhapatnam-530003</p>
+    </footer>
+
+</body>
+</html>
